@@ -1,0 +1,47 @@
+.theme-toggle-wrap {
+  @apply shrink-0 w-10 md:w-12 h-6 md:h-7 relative flex items-center rounded-[1.25rem] bg-[#fce899] transition duration-200;
+}
+
+.theme-toggle-wrap:has(input:checked) {
+  @apply bg-[#043449];
+}
+
+.theme-toggle-wrap .theme-toggle-thumb {
+  @apply flex justify-end transition-all duration-200 ease-linear;
+}
+
+.theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb {
+  @apply w-6 md:w-7;
+}
+.theme-toggle-wrap:has(input:checked) .theme-toggle-thumb {
+  @apply w-9 md:w-11;
+}
+
+.theme-toggle-wrap .theme-toggle-thumb i {
+  @apply size-5 md:size-6 flex justify-center items-center text-xs md:text-sm rounded-full bg-[#f4ca25] text-[#000] transition duration-200;
+}
+
+.theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i {
+  @apply bg-[#0ea5e9] text-white;
+}
+
+.theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb i.fa-moon {
+  transform: rotateZ(-90deg);
+}
+.theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i.fa-sun {
+  transform: rotateZ(90deg);
+}
+
+.theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb i.fa-moon,
+.theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i.fa-sun {
+  @apply opacity-0 w-0;
+}
+
+.theme-toggle-wrap:has(input:not(:checked)) .theme-toggle-thumb i.fa-sun,
+.theme-toggle-wrap:has(input:checked) .theme-toggle-thumb i.fa-moon {
+  @apply opacity-100;
+}
+
+.theme-toggle-wrap input {
+  @apply hidden;
+}

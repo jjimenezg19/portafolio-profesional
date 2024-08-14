@@ -1,0 +1,2 @@
+- Cambiar foto de LinkedIn
+- Modal para ver las imágenes de los projects más grandes
